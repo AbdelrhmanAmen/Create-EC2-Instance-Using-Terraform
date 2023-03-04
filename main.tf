@@ -5,15 +5,6 @@ terraform {
             version = "~>4.0"
         }
     }
-}
-
-provider "aws" {
-    region = "eu-west-3"
-
-}
-
-
-terraform {
     backend "s3" {
     bucket = "abdelrhman-bucket"
     key    = "tfstate"
@@ -21,3 +12,7 @@ terraform {
     }
 }
 
+provider "aws" {
+    region = "eu-west-3"
+
+}
